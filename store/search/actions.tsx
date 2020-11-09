@@ -9,7 +9,6 @@ import {
   GOODREAD_AUTHOR_ENDPOINT,
   GOODREAD_AUTHOR_BOOKS_ENDPOINT,
   CORS_EVERYWHERE_HEROKU,
-  AUTHOR_SEARCH_INIT,
 } from "@constants/goodread-api";
 
 export function searchInit(payload: {}) {
@@ -39,11 +38,11 @@ export function startSearch(payload: string) {
   };
 }
 
-export function selectAuthor(payload: number) {
+export function selectAuthor(payload: {}) {
   return { type: types.SELECT_AUTHOR, payload };
 }
 
-export function startAuthorSearch(payload?: {}) {
+export function startAuthorSearch(payload?: { authorId: number }) {
   console.log(payload);
   return async function (dispatch) {
     dispatch({ type: types.SEARCH_AUTHOR_STARTED, payload });
@@ -67,7 +66,7 @@ export function startAuthorSearch(payload?: {}) {
   };
 }
 
-export function startAuthorBooksSearch(payload?: {}) {
+export function startAuthorBooksSearch(payload?: { authorId: number }) {
   console.log(payload);
   return async function (dispatch) {
     dispatch({ type: types.SEARCH_AUTHOR_BOOKS_STARTED, payload });

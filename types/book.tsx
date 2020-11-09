@@ -7,6 +7,7 @@ type Book = {
   best_book: {
     author: {
       name: string;
+      id: number;
     };
     title: string;
     small_image_url: string;

@@ -1,7 +1,7 @@
 import Link from "next/Link";
 import { useDispatch } from "react-redux";
 import styles from "./BookList.module.css";
-import type bookType from "@types/book";
+import type bookType from "types/book";
 import { selectAuthor } from "@store/search/actions";
 
 type Props = {
@@ -11,7 +11,6 @@ type Props = {
 const BookListItem: React.FC<Props> = ({ book }) => {
   const dispatch = useDispatch();
 
-  console.log(book);
   function handleAuthorSelect() {
     const selectedAuthorId = book.best_book.author.id;
     const selectedAuthorName = book.best_book.author.name;

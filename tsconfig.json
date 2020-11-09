@@ -7,13 +7,13 @@
       "@constants/*": ["constants/*"],
       "@services/*": ["services/*"],
       "@styles/*": ["styles/*"],
-      "@store/*": ["store/*"],
-      "@types/*": ["types/*"]
+      "@store/*": ["store/*"]
+      // "@types/*": ["types/*"]
     },
     "lib": ["dom", "dom.iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,

@@ -14,9 +14,13 @@ const AuthorInfo: React.FC<Props> = () => {
   if (!selectedAuthor) {
     return <div></div>;
   } else {
-    const _booksList = selectedAuthor.books.book.map((book) => (
-      <AuthorBookListItem key={book.id} book={book} />
-    ));
+    const _booksList = selectedAuthor.books.book.map((book, i) => {
+      return book ? (
+        <AuthorBookListItem key={book.id} book={book} />
+      ) : (
+        <div key={i}></div>
+      );
+    });
 
     return (
       <section className={styles.author_info_container}>

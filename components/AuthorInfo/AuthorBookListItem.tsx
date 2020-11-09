@@ -1,8 +1,21 @@
 import styles from "./AuthorInfo.module.css";
-import type bookType from "@types/book";
 
 type Props = {
-  book: bookType;
+  book: {
+    link: string;
+    image_url: string;
+    small_image_url: string;
+    title: string;
+    book_title: string;
+    isbn: number;
+    text_reviews_count: number;
+    ratings_count: number;
+    num_pages: number;
+    average_rating: number;
+    publication_day: number;
+    publication_month: number;
+    publication_year: number;
+  };
 };
 
 const AuthorBookListItem: React.FC<Props> = ({ book }) => {

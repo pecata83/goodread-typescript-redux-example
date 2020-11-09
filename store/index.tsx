@@ -8,7 +8,7 @@ import initialState from "./initialState";
 
 let store;
 
-function initStore(preloadedState = initialState) {
+function initStore(preloadedState: {} = initialState) {
   return createStore(
     combineReducers({
       search: searchReducer,
