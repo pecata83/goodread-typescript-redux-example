@@ -1,7 +1,7 @@
-import Link from "next/Link";
 import { useDispatch } from "react-redux";
+import Link from "next/link";
 import styles from "./BookList.module.css";
-import type bookType from "types/book";
+import bookType from "../../types/book";
 import { selectAuthor } from "@store/search/actions";
 
 type Props = {
