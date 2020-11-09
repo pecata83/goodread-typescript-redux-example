@@ -1,0 +1,46 @@
+.book_list_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.25rem;
+}
+
+.book_list_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0.25rem;
+}
+
+.book_list {
+  width: 100%;
+}
+
+.book_list > div:nth-child(odd) {
+  background-color: #efefef;
+}
+
+.book_list_item {
+  display: flex;
+  align-items: center;
+  min-width: 400px;
+  max-width: 100%;
+  padding: 0.25rem;
+}
+
+.book_info {
+  padding: 0.25rem;
+}
+
+.book_info_author {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.book_title {
+  padding-bottom: 0.25rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
